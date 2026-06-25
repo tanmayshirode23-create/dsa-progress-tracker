@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-dark-800 rounded-lg border border-dark-700 p-6 shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .card-hover {
+    @apply bg-dark-800 rounded-lg border border-dark-700 p-6 shadow-lg hover:shadow-xl hover:border-primary transition-all duration-300 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-dark-700 text-gray-100 rounded-lg font-semibold border border-dark-600 hover:bg-dark-600 transition-all duration-200;
+  }
+
+  .badge-easy {
+    @apply bg-green-900 text-green-300 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-medium {
+    @apply bg-orange-900 text-orange-300 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-hard {
+    @apply bg-red-900 text-red-300 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .input-field {
+    @apply bg-dark-800 border border-dark-700 rounded-lg px-4 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200;
+  }
+
+  .table-header {
+    @apply sticky top-0 bg-dark-900 border-b border-dark-700 z-10;
+  }
+
+  .pattern-chip {
+    @apply inline-block px-2 py-1 rounded text-xs font-medium margin-right-2 mb-1;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
